@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    // https://mvnrepository.com/artifact/com.mongodb/mongo
+//    implementation group: 'com.mongodb', name: 'mongo', version: '1.0'
+//    // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+//    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.14'
+// https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+//    implementation group: 'org.mongodb', name: 'mongodb-driver-sync', version: '5.1.1'
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+//    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.13'
+    implementation 'org.mongodb:mongodb-driver-sync:4.4.0'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation("org.apache.logging.log4j:log4j-api:2.22.1")
+    implementation("org.apache.logging.log4j:log4j-core:2.22.1")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.22.1")
+}
+
+test {
+    useJUnitPlatform()
+}
