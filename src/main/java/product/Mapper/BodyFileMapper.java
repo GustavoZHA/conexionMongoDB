@@ -11,8 +11,6 @@ public class BodyFileMapper {
     public static BodyFileDTO bodyFileDTOFromString(String input) {
         BodyFileDTO bodyFileDTO = new BodyFileDTO();
 
-        if(input == null) return bodyFileDTO;
-
         String[] body = input.split(" ");
 
         bodyFileDTO.setMethod(body[0]);

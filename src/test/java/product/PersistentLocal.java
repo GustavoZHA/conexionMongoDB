@@ -115,6 +115,31 @@ public class PersistentLocal {
                         }
                         break;
                     }
+                    case "GETby-product:": {
+                        if("getById".equals(record.get("methodName")) && !isSelected(id)) {
+                            String idActual = ((ArrayList<?>) (record.get("parameters"))).get(0).toString();
+                            if (idActual.equals(bodyFileDTO.getId())) {
+                                Assertions.assertTrue(record.get("result").toString().contains("id=" + bodyFileDTO.getId()), "The id is NOT MATCHED. The expected is" +  bodyFileDTO.getId());
+                                Assertions.assertEquals(record.get("serviceName"), "product-service");
+                                Assertions.assertEquals(record.get("className"), "ProductServiceImpl");
+                                Assertions.assertEquals(record.get("executionStatus"), "SUCCESS");
+                                Assertions.assertEquals(bodyFileDTO.getStatus(), "200");
+                                listId.add(id);
+                            }
+                        }
+                        break;
+                    }
+                    case "GETAll-product:": {
+                        if("getAll".equals(record.get("methodName")) && !isSelected(id)) {
+                                Assertions.assertEquals(record.get("serviceName"), "product-service");
+                                Assertions.assertEquals(record.get("className"), "ProductServiceImpl");
+                                Assertions.assertEquals(record.get("executionStatus"), "SUCCESS");
+                                Assertions.assertEquals(bodyFileDTO.getStatus(), "200");
+                                listId.add(id);
+                        }
+                        break;
+                    }
+
                     default: {
                         System.out.println("Something is wrong may be: Problem in txt file, only the input valid are POST-product:, PUT-product: and DELETE-product:");
                     }
