@@ -1,0 +1,5 @@
+GETAll-product: NoId 200
+POST-product: 32 emeeen dopiirdocpptsi 3143.0 464 201
+GETby-product: 32 200
+PUT-product: 32 aaemneaeae piirt 5000.0 37 201
+DELETE-product: 32 200

@@ -1,6 +1,6 @@
 package product.dto;
 
-public class BodyFileDTO {
+public class BodyDTO {
     private String method;
     private String id;
     private String name;

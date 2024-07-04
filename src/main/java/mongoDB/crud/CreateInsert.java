@@ -3,10 +3,10 @@ package mongoDB.crud;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 
-public class InsertData {
+public class CreateInsert {
     public MongoCollection<Document> collection;
 
-    public InsertData(MongoCollection<Document> collection) {
+    public CreateInsert(MongoCollection<Document> collection) {
         this.collection = collection;
     }
 

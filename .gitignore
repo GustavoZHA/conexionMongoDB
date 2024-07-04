@@ -7,6 +7,10 @@ gradle/
 gradlew
 gradlew.bat
 
+### Project ###
+src/test/resources/expected_bad_request_Execution.txt
+src/test/resources/expected_Request.txt.txt
+
 ### IntelliJ IDEA ###
 .idea/
 .idea/modules.xml
