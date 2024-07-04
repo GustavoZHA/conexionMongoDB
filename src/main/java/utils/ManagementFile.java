@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-
 public class ManagementFile {
+
     public static void readTextFileShow(String pathFile) throws Exception{
         List<String> lines = Files.readAllLines(Paths.get(pathFile));
         for (String line : lines) {
